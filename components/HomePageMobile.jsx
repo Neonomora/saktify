@@ -34,7 +34,7 @@ function LogoCard() {
           height={50}
           className="rounded-full"
         />
-        <CardTitle className="text-3xl font-thin bg-linear-to-r from-black to-gray-400 bg-clip-text text-transparent">
+        <CardTitle className="text-3xl font-light bg-linear-to-r from-black to-gray-400 bg-clip-text text-transparent">
           Sakti Info
         </CardTitle>
       </Link>
