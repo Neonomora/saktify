@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 const fontSans = Fredoka({
   subsets: ["latin"],
   weight: ['500'],
+  variable: "--font-sans",
 });
 
 export const metadata = {
