@@ -15,7 +15,7 @@ export default function NewsListPage({ newsList }) {
   }
 
   return (
-    <div className="max-w-6xl mx-6">
+    <div className="max-w-6xl mx-6 mb-4">
       <h1 className="text-xl md:text-2xl font-semibold mb-6 text-center">Seputar Kampus</h1>
 
       <ul className="flex flex-row gap-4 flex-wrap justify-center ">
