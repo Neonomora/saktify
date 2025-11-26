@@ -59,7 +59,7 @@ function AdminLoginCard() {
 
 function NotificationCard() {
   return (
-    <Card className="border flex flex-col justify-center items-center gap-2 py-5">
+    <Card className="border flex flex-col justify-center items-center gap-2 mb-4">
       <CardTitle className="text-gray-800 text-base md:text-lg font-medium">
         Get Notification
       </CardTitle>
