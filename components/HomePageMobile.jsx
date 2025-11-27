@@ -59,9 +59,9 @@ function AdminLoginCard() {
 
 function NotificationCard() {
   return (
-    <Card className="border flex flex-col justify-center items-center gap-2 mb-4">
+    <Card className="border flex flex-col justify-center items-center gap-2 mb-10">
       <CardTitle className="text-gray-800 text-base md:text-lg font-medium my-1">
-        Get Notification u
+        Get Notification
       </CardTitle>
       <SubscribeForm />
     </Card>
@@ -84,7 +84,7 @@ export default function HomePageMobile() {
   ];
 
   return (
-    <div className="block md:hidden grid grid-cols-1 gap-4 h-screen mx-4 my-10">
+    <div className="block md:hidden grid grid-cols-1 gap-4 h-screen mx-4 mt-4">
       
       {/* Kolom 1 */}
       <div className="flex flex-col gap-4 h-full">
