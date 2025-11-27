@@ -34,7 +34,7 @@ export default function SubscribeForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex flex-col">
+      <form onSubmit={handleSubmit} className="flex flex-col mb-2">
         <div className="flex mx-auto rounded-full border border-gray-800 focus-within:ring-gray-800 focus-within:ring-2">
           <input
             type="email"
