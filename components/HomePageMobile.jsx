@@ -84,7 +84,7 @@ export default function HomePageMobile() {
   ];
 
   return (
-    <div className="block md:hidden grid grid-cols-1 gap-4 mx-4 my-4">
+    <div className="block md:hidden grid grid-cols-1 gap-4 m-4">
       
       {/* Kolom 1 */}
       <div className="flex flex-col gap-4 h-full">
