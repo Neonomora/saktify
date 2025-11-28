@@ -45,11 +45,11 @@ export default async function TaskPage({ searchParams }) {
       <div>
         <Filter/>
       </div>
-      <div className="flex flex-row justify-between ml-4 md:-ml-4">
+      <div className="flex flex-row md:space-x-6 ml-4 md:-ml-4">
         {/* Left Column - Announcements */}
         <section className="basis-1/3">
           <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center">
-            Seputar Kelas
+            Berita Kelas
           </h3>
           <Announcement announcementList={plainAnnouncements} />
         </section>

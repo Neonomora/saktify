@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const categories = ["TRKJ", "BD", "MKSP"];
-const subCategories = ["A1", "B1", "C1"];
+const categories = ["ALL", "TRKJ", "BD", "MKSP"];
+const subCategories = ["ALL", "A1", "B1", "C1"];
 
 export default function Filter() {
-  const [classCat, setClassCat] = useState(null);
-  const [subClassCat, setSubClassCat] = useState(null);
+  const [classCat, setClassCat] = useState("ALL");
+  const [subClassCat, setSubClassCat] = useState("ALL");
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -23,9 +23,9 @@ export default function Filter() {
 
   const handleFilter = (newClassCat, newSubClassCat) => {
     const params = new URLSearchParams(searchParams.toString());
-    if (newClassCat) params.set("classFilter", newClassCat);
+    if (newClassCat && newClassCat !== "ALL") params.set("classFilter", newClassCat);
     else params.delete("classFilter");
-    if (newSubClassCat) params.set("subClassFilter", newSubClassCat);
+    if (newSubClassCat && newSubClassCat !== "ALL") params.set("subClassFilter", newSubClassCat);
     else params.delete("subClassFilter");
 
     router.push(`/class?${params.toString()}`);
@@ -36,7 +36,7 @@ export default function Filter() {
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`mx-2 w-18 py-2 rounded-xl shadow-sm ${cat === classCat ? "bg-blue" : "bg-white"}`}
+            className={`mx-2 w-18 py-2 rounded-xl shadow-sm ${cat === classCat ? "border border-gray-300" : "bg-white"}`}
             onClick={() => {
               setClassCat(cat);
               handleFilter(cat, subClassCat);
@@ -50,7 +50,7 @@ export default function Filter() {
         {subCategories.map((scat) => (
           <button
             key={scat}
-            className={`mx-2 w-18 py-2 rounded-xl shadow-sm ${scat === subClassCat ? "bg-blue" : "bg-white"}`}
+            className={`mx-2 w-18 py-2 rounded-xl shadow-sm ${scat === subClassCat ? "border border-gray-300" : "bg-white"}`}
             onClick={() => {
               setSubClassCat(scat);
               handleFilter(classCat, scat);
